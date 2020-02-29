@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <title>TiriviaGame</title>
+</head>
+<body>
+    <div class="container"></div>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+            <h1 class="display-4">President's Trivia Game</h1>
+            <p class="lead">Answer the Questions!</p>
+            </div>
+      </div>
+
+     
+            <div class='col-md-12'>
+                <p class="text-center"><button type="button" class="btn btn-default" id="start-button">Click to Start!</button></p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Main Quiz Container -->
+    <div class="container" id="game-container">
+    
+        
+    
+        <!-- Time Remaining -->
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="text-center">Time Remaining: <span id=time-remaining></span> Seconds</h2>
+            </div>
+        </div>
+    
+        <!-- Question 1 -->
+        <form>
+        <div class="row odd-row">
+            <div class='col-md-12'>
+                <h3 class="text-center">Who was the First President?</h3>
+            </div>
+            <div class="col-md-12">
+                <p class="text-center">
+                    <label class="radio-inline">
+                      <input type="radio" name="questionOne" class="questionOne" id="inlineRadio1" value="incorrect"> George Washington
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="questionOne" class="questionOne" id="inlineRadio2" value="incorrect"> Gerald Ford
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="questionOne" class="questionOne" id="inlineRadio3" value="incorrect"> Kobe Bryant
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="questionOne" class="questionOne" id="inlineRadio4" value="correct"> Thomas Jefferson
+                    </label>
+                </p>
+            </div>
+        </div>
+    
+        <!-- Question 2 -->
+        <div class="row">
+            <div class='col-md-12'>
+                <h3 class="text-center">Who was the 16th President?</h3>
+            </div>
+            <div class="col-md-12">
+                <p class="text-center">
+                    <label class="radio-inline">
+                      <input type="radio" name="questionTwo" class="questionTwo" id="inlineRadio1" value="correct"> John Adams
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="questionTwo" class="questionTwo" id="inlineRadio2" value="incorrect"> Barack Obama
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="questionTwo" class="questionTwo" id="inlineRadio3" value="incorrect"> Abraham Lincoln
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="questionTwo" class="questionTwo" id="inlineRadio4" value="incorrect"> Andrew Jackson
+                    </label>
+                </p>
+            </div>
+        </div>
+    
+        <!-- Question 3 -->
+        <div class="row odd-row">
+            <div class='col-md-12'>
+                <h3 class="text-center">Who was the 22nd President?</h3>
+            </div>
+            <div class="col-md-12">
+                <p class="text-center">
+                    <label class="radio-inline">
+                      <input type="radio" name="questionThree" class="questionThree" id="inlineRadio1" value="incorrect"> Chester A. Arthur
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="questionThree" class="questionThree" id="inlineRadio2" value="incorrect"> Lyndon B. Johnson
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="questionThree" class="questionThree" id="inlineRadio3" value="correct"> Grover Clevland
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="questionThree" class="questionThree" id="inlineRadio4" value="incorrect"> Theodore Roosevelt
+                    </label>
+                </p>
+            </div>
+        </div>
+    
+            <!-- Question 4 -->
+        <div class="row">
+            <div class='col-md-12'>
+                <h3 class="text-center">Who was the 32nd President?</h3>
+            </div>
+            <div class="col-md-12">
+                <p class="text-center">
+                    <label class="radio-inline">
+                      <input type="radio" name="questionFour" class="questionFour" id="inlineRadio1" value="incorrect"> Dwight Eisenhower
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="questionFour" class="questionFour" id="inlineRadio2" value="correct"> Franklin D. Roosevelt
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="questionFour" class="questionFour" id="inlineRadio3" value="incorrect"> Theodore Roosevelt
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="questionFour" class="questionFour" id="inlineRadio4" value="incorrect"> John F. Kennedy
+                    </label>
+                </p>
+            </div>
+        </div>
+    
+            <!-- Question 5 -->
+        <div class="row odd-row">
+            <div class='col-md-12'>
+                <h3 class="text-center">Who was the 6th President?</h3>
+            </div>
+            <div class="col-md-12">
+                <p class="text-center">
+                    <label class="radio-inline">
+                      <input type="radio" name="questionFive" class="questionThree" id="inlineRadio1" value="incorrect"> John Quincy Adams
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="questionFive" class="questionThree" id="inlineRadio2" value="incorrect"> John Adams
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="questionFive" class="questionThree" id="inlineRadio3" value="correct"> Thomas Jefferson
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="questionFive" class="questionThree" id="inlineRadio4" value="incorrect"> Lebron James
+                    </label>
+                </p>
+            </div>
+        </div>
+    
+            <!-- Question 6 -->
+        <div class="row">
+            <div class='col-md-12'>
+                <h3 class="text-center">Who was the 38th President?</h3>
+            </div>
+            <div class="col-md-12">
+                <p class="text-center">
+                    <label class="radio-inline">
+                      <input type="radio" name="questionSix" class="questionThree" id="inlineRadio1" value="incorrect"> Dwight Eisenhower
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="questionSix" class="questionThree" id="inlineRadio2" value="incorrect"> Harry Truman
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="questionSix" class="questionThree" id="inlineRadio3" value="incorrect"> Richard Nixon
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="questionSix" class="questionThree" id="inlineRadio4" value="correct"> Gearld Ford
+                    </label>
+                </p>
+            </div>
+        </div>
+    
+            <!-- Question 7 -->
+        <div class="row odd-row">
+            <div class='col-md-12'>
+                <h3 class="text-center">Who was the 35th President?</h3>
+            </div>
+            <div class="col-md-12">
+                <p class="text-center">
+                    <label class="radio-inline">
+                      <input type="radio" name="questionSeven" class="questionThree" id="inlineRadio1" value="correct"> John F Kennedy
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="questionSeven" class="questionThree" id="inlineRadio2" value="incorrect"> Richard Nixon
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="questionSeven" class="questionThree" id="inlineRadio3" value="correct"> Jimmy Carter
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="questionSeven" class="questionThree" id="inlineRadio4" value="incorrect"> John Adams
+                    </label>
+                </p>
+            </div>
+        </div>
+    
+            <!-- Question 8 -->
+        <div class="row">
+            <div class='col-md-12'>
+                <h3 class="text-center">Who was the 44th President?</h3>
+            </div>
+            <div class="col-md-12">
+                <p class="text-center">
+                    <label class="radio-inline">
+                      <input type="radio" name="questionEight" class="questionThree" id="inlineRadio1" value="incorrect"> Donald Trump
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="questionEight" class="questionThree" id="inlineRadio2" value="incorrect"> Barack Obama
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="questionEight" class="questionThree" id="inlineRadio3" value="correct"> George W. Bush
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="questionEight" class="questionThree" id="inlineRadio4" value="incorrect"> Ronald Reagan 
+                    </label>
+                </p>
+            </div>
+        </div>
+    
+            <!-- Question 9 -->
+        <div class="row odd-row">
+            <div class='col-md-12'>
+                <h3 class="text-center">Who was the only President to Quit?</h3>
+            </div>
+            <div class="col-md-12">
+                <p class="text-center">
+                    <label class="radio-inline">
+                      <input type="radio" name="questionNine" class="questionThree" id="inlineRadio1" value="incorrect"> Bill Clinton
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="questionNine" class="questionThree" id="inlineRadio2" value="incorrect"> Richard Nixon
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="questionNine" class="questionThree" id="inlineRadio3" value="correct"> Donald Trump
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="questionNine" class="questionThree" id="inlineRadio4" value="incorrect"> Ronald Reagan
+                    </label>
+                </p>
+            </div>
+        </div>
+    
+            <!-- Question 10 -->
+        <div class="row">
+            <div class='col-md-12'>
+                <h3 class="text-center">Who served 2 non-consecutive Terms? </h3>
+            </div>
+            <div class="col-md-12">
+                <p class="text-center">
+                    <label class="radio-inline">
+                      <input type="radio" name="questionTen" class="questionThree" id="inlineRadio1" value="correct"> Grover Clevland
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="questionTen" class="questionThree" id="inlineRadio2" value="incorrect"> Andrew Jackson
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="questionTen" class="questionThree" id="inlineRadio3" value="incorrect"> Franklin D. Roosevelt
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="questionTen" class="questionThree" id="inlineRadio4" value="incorrect"> Bill Clinton
+                    </label>
+                </p>
+            </div>
+        </div>
+        
+            <p class="text-center">
+                <button type="submit" class="btn btn-default" id="submit-button">Submit</button>
+            </p>
+        </form>
+    </div>
+    
+    <!-- Score Sheet Container -->
+    <div class="container" id="score-container">
+    
+      
+        <!-- Game Over -->
+        <div class="row">
+            <h2 class="text-center">Game Over!</h2>
+        </div>
+    
+        <!-- Game Results -->
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="text-center">Correct Answers: <span id="correct-answers-div"></span></h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="text-center">Incorrect Answers: <span id="incorrect-answers-div"></span></h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="text-center">Unanswered: <span id="unanswered-div"></span></h3>
+            </div>
+        </div>
+
+      
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
