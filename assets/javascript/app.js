@@ -98,9 +98,10 @@ $(document).ready(function() {
 			event.preventDefault();                  // prevents the page from refreshing
 			submitForm();                            // submits answers
 			Score();
-			clearInterval(interval);                 // stops the clock from ticking so it won't re-submit the form
+            clearInterval(interval); 
+                           // stops the clock from ticking so it won't re-submit the form
 		});
 	});
 });
 
-
+//I could not figure out how to reset the time and how to add to blanks and incorrect answers
