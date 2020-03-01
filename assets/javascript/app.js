@@ -19,8 +19,8 @@ function Score(){
 
 function updateGame(){
     $("#correct-answers-div").html(correct);
-    $("incorrect-answers-div").html(incorrect);
-    $("unanswered-div").html(blanks);
+    $("#incorrect-answers-div").html(incorrect);
+    $("#unanswered-div").html(blanks);
     $("#time-remaining").text(counter);
 };
 
@@ -98,4 +98,4 @@ $(document).ready(function() {
 	});
 });
 
-//I could not figure out how to reset the time and how to add to blanks and incorrect answers
+//I could not figure out how to reset the time
