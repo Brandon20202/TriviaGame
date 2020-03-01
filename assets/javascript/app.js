@@ -1,4 +1,4 @@
-var counter=90;
+var counter=100;
 var correct=0;
 var incorrect=0;
 var blanks=0;
@@ -36,16 +36,15 @@ function submitForm() {
 	var answer8 = $('input[name="questionEight"]:checked').val();
 	var answer9 = $('input[name="questionNine"]:checked').val();
 	var answer10 = $('input[name="questionTen"]:checked').val();
-	answer.push(answer1);                                    // pushes the first response into an array
-	answer.push(answer2);                                    // pushes the second response into an array
-	answer.push(answer3);                                    // pushes the third response into an array
-	answer.push(answer4);                                    // pushes the fourth response into an array
-	answer.push(answer5);                                    // pushes the fifth response into an array
-	answer.push(answer6);                                    // pushes the sixth response into an array
-	answer.push(answer7);                                    // pushes the seventh response into an array
-	answer.push(answer8);                                    // pushes the eight response into an array
-	answer.push(answer9);                                    // pushes the ninth response into an array
-	answer.push(answer10);                                    // pushes the tenth response into an array
+	answer.push(answer1);                                   
+	answer.push(answer2);                             
+	answer.push(answer3);                                    
+	answer.push(answer4);                                    
+	answer.push(answer5);                                  
+	answer.push(answer6);                                    
+	answer.push(answer7);                                 
+	answer.push(answer9);                                   
+	answer.push(answer10);                                   
 
 
 	// Checks whether each answer in the array is correct,incorrect,or unanswered and increments the appropriate variables
@@ -69,10 +68,6 @@ function submitForm() {
 };
 
 
-//--------------------------------------------------------------------------------------------------------
-// GAME FLOW
-//--------------------------------------------------------------------------------------------------------
-
 // On document load...
 $(document).ready(function() {
 
@@ -81,25 +76,24 @@ $(document).ready(function() {
 		startGame();
 		updateGame();
 		var interval = setInterval(function() {
-	   	 	counter--;                              // decrements the counter
-	    	$("#time-remaining").text(counter);     // updates the counter in the UI
+	   	 	counter--;                              
 
 	    	// When the counter reaches 0...
 	    	if (counter == 0) {               
-        		submitForm();                       // submits answers
-        		clearInterval(interval);            // stops the clock from ticking
-        		Score();                        // sends user to the score menu 
+        		submitForm();                       
+        		clearInterval(interval);            
+        		Score();                        
     		}
 		}, 1000);
 		updateGame();
 
 		// On submit button click...
 		$("#submit-button").on("click", function(){
-			event.preventDefault();                  // prevents the page from refreshing
-			submitForm();                            // submits answers
+			event.preventDefault();                  
+			submitForm();                            
 			Score();
             clearInterval(interval); 
-                           // stops the clock from ticking so it won't re-submit the form
+                           
 		});
 	});
 });
