@@ -1,0 +1,25 @@
+body{
+    background-color:blue;
+    background-image: url("../images/us-flag-21-apr-2017.jpeg.jpg");
+}
+.text-center{
+    background-color: whitesmoke;
+    border-style:solid;
+
+}
+.jumbotron{
+    background-image: url("../images/us-flag-21-apr-2017.jpeg.jpg");
+
+}
+h1{
+    font-weight: bolder;
+    border-style: solid;
+    color:black;
+    background-color: white;
+
+}
+.lead{
+    border-style: solid;
+    background-color: whitesmoke;
+    
+}

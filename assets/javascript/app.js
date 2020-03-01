@@ -6,6 +6,7 @@ var answer=[];
 
 
 
+
 function startGame(){
     $("#start-container").hide();
     $("#game-container").show();
